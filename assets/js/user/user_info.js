@@ -18,11 +18,11 @@ $(function() {
             success: function(res) {
                 // console.log(res);
                 if (res.status !== 0) return layer.msg('获取信息失败')
-                $('#username').val(res.data.username)
-                $('#nickname').val(res.data.nickname)
-                $('#email').val(res.data.email)
-                $('#idd').val(res.data.id)
-                    // form.val('layui_form', res.data)
+                    // $('#username').val(res.data.username)
+                    // $('#nickname').val(res.data.nickname)
+                    // $('#email').val(res.data.email)
+                    // $('#idd').val(res.data.id)
+                form.val('layui_form', res.data)
             }
         });
     }
@@ -40,7 +40,6 @@ $(function() {
             type: "post",
             url: "/my/userinfo",
             data: $(this).serialize(),
-
             success: function(res) {
                 if (res.status !== 0) return layer.msg('更新信息失败')
                 layer.msg('更新信息成功')

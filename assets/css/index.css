@@ -37,7 +37,7 @@ a {
     text-decoration: none!important;
 }
 
-#text-avatar {
+.text-avatar {
     position: relative;
     top: 4px;
     display: inline-block;
